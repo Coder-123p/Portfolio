@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/098fead5f2.js" crossorigin="anonym nymous"></script>
+   
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="logo.jpg" class="Logo" width="100" height="100">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software developer</p>
+            <h1>hi,I'm <span>Unnati Priya</span></h1>
+        </div>
+
+        <div id="header">
+            <img src="AdobeStock_617132669_Preview.png" alt="" class="image">
+
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="avtar2.webp" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut facere laboriosam molestias.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link " onclick="opentab('skills',event)">Skills</p>
+                        <p class="tab-links " onclick="opentab('Experience',event)">Experience</p>
+                        <p class="tab-links " onclick="opentab('Education',event)">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Design</span><br>Design web app</li>
+                            <li><span>web development</span><br> web app development</li>
+                            <li><span>App development</span><br>build android</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>ABC</span><br>Lorem, ipsum dolor.</li>
+                            <li><span>XYZ</span><br> Lorem, ipsum dolor.</li>
+                            <li><span>PQR</span><br>Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2019</span><br>Schooling</li>
+                            <li><span>2023</span><br>BCA</li>
+                            <li><span>2025</span><br>MCA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <table class="tble">
+                    <tr>
+                        <th>
+                            <h2><i class="fa-solid fa-code"></i>Web Design</h2>
+                        </th>
+                        <th>
+                            <h2> <i class="fa-solid fa-crop"></i>UI/UX Design</h2>
+                        </th>
+                        <th>
+                           
+                            <h2> <i class="fa-solid fa-store"></i>App design</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                                tincidunt sit amet sapien quis.</p>
+                            <a href="#">learn more</a>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit
+                                amet
+                                sapien quis.</p>
+                            <a href="#">learn more</a>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh,
+                                tincidunt sit amet sapien quis.</p>
+                            <a href="#">learn more</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        I
+        <script>
+            var tablinks = document.getElementByClassName("tab-links");
+            var tabcontents = document.getElementByClassName("tab-contents");
+
+            function opentab(tabname,event) {
+
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+
+            }
+
+
+
+        </script>
+
+</body>
+
+
+</html>
